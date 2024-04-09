@@ -1,0 +1,6 @@
+*
+!.env.backend.example
+!.env.frontend.example
+!.gitignore
+!docker-compose.yml
+!README
