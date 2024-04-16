@@ -1,13 +1,9 @@
 services:
   frontend:
     image: ghcr.io/jspaste/frontend:latest
-    container_name: jspaste-frontend
+    container_name: frontend
     ports:
       - "127.0.0.1:60000:3000"
-    deploy:
-      resources:
-        limits:
-          memory: 512M
     env_file:
       - ./.env.frontend
     security_opt:
@@ -15,19 +11,15 @@ services:
 
   backend:
     image: ghcr.io/jspaste/backend:latest
-    container_name: jspaste-backend
+    container_name: backend
     ports:
       - "127.0.0.1:60001:4000"
-    deploy:
-      resources:
-        limits:
-          memory: 512M
     env_file:
       - ./.env.backend
     volumes:
-      - jspaste-backend-data:/home/nonroot/documents
+      - backend-data:/home/nonroot/documents
     security_opt:
       - no-new-privileges:true
 
 volumes:
-  jspaste-backend-data:
+  backend-data:
