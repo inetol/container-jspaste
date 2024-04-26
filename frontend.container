@@ -1,0 +1,13 @@
+[Container]
+Image=ghcr.io/jspaste/frontend:latest
+ContainerName=jspaste-frontend
+Network=jspaste.network
+PublishPort=127.0.0.1:60000:3000
+EnvironmentFile=%h/.env.frontend
+AutoUpdate=registry
+NoNewPrivileges=true
+
+[Service]
+Restart=always
+RestartSec=5
+TimeoutStartSec=300

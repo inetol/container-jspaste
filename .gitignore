@@ -2,5 +2,7 @@
 !.env.backend.example
 !.env.frontend.example
 !.gitignore
-!docker-compose.yml
+!backend.container
+!frontend.container
+!jspaste.network
 !README

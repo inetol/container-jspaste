@@ -1,0 +1,14 @@
+[Container]
+Image=ghcr.io/jspaste/backend:latest
+ContainerName=jspaste-backend
+Network=jspaste.network
+PublishPort=127.0.0.1:60001:4000
+EnvironmentFile=%h/.env.backend
+Volume=backend-documents:/home/nonroot/documents
+AutoUpdate=registry
+NoNewPrivileges=true
+
+[Service]
+Restart=always
+RestartSec=5
+TimeoutStartSec=300
