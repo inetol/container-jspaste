@@ -4,5 +4,4 @@
 !.gitignore
 !backend.container
 !frontend.container
-!jspaste.network
 !README
